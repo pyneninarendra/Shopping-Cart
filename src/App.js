@@ -1,3 +1,4 @@
+import ProductsList from "./ProductsList";
 
 function App() {
   return (
@@ -6,7 +7,12 @@ function App() {
         <a href="/">Shopping Cart</a>
       </header>
       <main>
-        Products List
+        <div className='content'>
+          <div className='sidebar'>Side Nav</div>
+          <div className='main'>
+            <ProductsList />
+          </div>
+        </div>
       </main>
       <footer>
         All right reserved, 2012
