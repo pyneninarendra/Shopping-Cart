@@ -20,4 +20,7 @@ header{grid-area: header; display: flex;align-items: center;background-color: #2
 header a{text-decoration: none;color: #fff;}
 header a:hover{color:#ff8000;}
 main{grid-area: main;}
+.content{display: flex;}
+.content .sidebar{flex: 1 15rem;background-color: #efefef;}
+.content .main{flex: 3 60rem;background-color: #fff;}
 footer{grid-area: footer; display: flex;align-items: center;justify-content: center;background-color: #203040;color: #fff;}
