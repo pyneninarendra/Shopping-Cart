@@ -1,3 +1,4 @@
+
 import ProductsList from "./ProductsList";
 
 function App() {
@@ -8,10 +9,10 @@ function App() {
       </header>
       <main>
         <div className='content'>
-          <div className='sidebar'>Side Nav</div>
-          <div className='main'>
+          <div className='main'>            
             <ProductsList />
           </div>
+          <div className='sidebar'>Cart Item</div>          
         </div>
       </main>
       <footer>

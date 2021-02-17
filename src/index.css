@@ -10,12 +10,12 @@ header a{text-decoration: none;color: #fff;}
 header a:hover{color:#ff8000;}
 main{grid-area: main;}
 .content{display: flex;}
-.content .sidebar{flex: 1 15rem;background-color: #efefef;}
-.content .main{flex: 3 60rem;background-color: #fff;}
+.content .sidebar{flex: 1 15rem;padding:8px;}
+.content .main{flex: 3 60rem;}
 footer{grid-area: footer; display: flex;align-items: center;justify-content: center;background-color: #203040;color: #fff;}
 
 /* Products */
-.products{list-style-type: none;display: flex;align-items: center;justify-content: center;margin: 0;padding: 0;flex-wrap: wrap;}
+.products{list-style-type: none;display: flex;align-items: center;margin: 0;padding: 0;flex-wrap: wrap;}
 .products li{flex: 0 1 29rem;height: 47rem;padding: 1rem;}
 .product{display: flex;flex-direction: column;justify-content: space-between;height: 100%;}
 .product a{text-decoration: none;}
@@ -24,3 +24,7 @@ footer{grid-area: footer; display: flex;align-items: center;justify-content: cen
 .product-price div,
 .product-price button{text-align: center;flex: 1;}
 /* Products */
+
+/* Filter */
+.filter{display: flex;justify-content: space-between;border-bottom: 2px solid #203040;padding:8px 20px;}
+/* Filter */
