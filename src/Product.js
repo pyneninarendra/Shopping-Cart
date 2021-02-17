@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import formatCurrency from './util'
+
  class Product extends Component {
     render() {
         return (
