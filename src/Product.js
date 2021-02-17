@@ -6,7 +6,7 @@ import formatCurrency from './util'
             <div>
                 <ul className='products'>
                     {this.props.prod.map((product, ind) => 
-                    <li key="ind">
+                    <li key={ind}>
                         <div className="product">
                             <a href={"#" + product._id}>
                                 <img src={product.image} alt={product.title} />
