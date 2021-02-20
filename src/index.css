@@ -10,7 +10,7 @@ header a{text-decoration: none;color: #fff;}
 header a:hover{color:#ff8000;}
 main{grid-area: main;}
 .content{display: flex;}
-.content .sidebar{flex: 1 15rem;padding:8px;}
+.content .sidebar{flex: 1 15rem;}
 .content .main{flex: 3 60rem;}
 footer{grid-area: footer; display: flex;align-items: center;justify-content: center;background-color: #203040;color: #fff;}
 
@@ -28,3 +28,14 @@ footer{grid-area: footer; display: flex;align-items: center;justify-content: cen
 /* Filter */
 .filter{display: flex;justify-content: space-between;border-bottom: 2px solid #203040;padding:8px 20px;}
 /* Filter */
+
+/* Cart */
+.cart{display: flex; flex-wrap: wrap; padding: 8px 20px;}
+.cartHeader{border-bottom: 2px solid #203040;}
+.cart-items{list-style: none;width:100%;padding: 0;}
+.cart-items img{width: 5rem;}
+.cart-items li{display: flex;}
+.cart-items li div{padding: .5rem;}
+.cart-items li div:last-child{flex: 1;}
+.total{display: flex;justify-content: space-between;width: 100%;align-items: center;font-weight: bold;font-size: 1.4rem;}
+/* Cart */
