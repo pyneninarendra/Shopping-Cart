@@ -2,6 +2,34 @@ import React, { Component } from 'react'
 import formatCurrency from './util';
 
 export default class Cart extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            name: '',
+            email:'',
+            address:'',
+            showCheckout: false 
+        }
+    }
+
+    handleEvent = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    createOrder =(e) => {
+        e.preventDefault();
+        const order = {
+            name: this.state.name,
+            email: this.state.email,
+            address: this.state.address,
+            cartItems: this.props.cartItems
+        }
+        this.props.createOrder(order)        
+    }
+    
     render() {
         const {cartItems} = this.props;
         return (
@@ -36,11 +64,32 @@ export default class Cart extends Component {
                                     Total: {" "}
                                     {formatCurrency(
                                         cartItems.reduce((a,c) => a+ (c.price * c.count), 0)
-                                    )} {" "}<button className="btn btn-success">Checkout</button>
+                                    )} {" "}<button onClick={()=> {this.setState({
+                                        showCheckout: true
+                                    })}} className="btn btn-success">Checkout</button>
                             </div>
                         )}
                     </div>
                 </div>
+                {
+                        this.state.showCheckout && (<div className="checkoutForm">
+                            <form className="form-horizontal" onSubmit={this.createOrder}>
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" className="form-control" name="name" onChange={this.handleEvent} />
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" className="form-control" name="email" onChange={this.handleEvent} />
+                                </div>
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <input type="text" className="form-control" name="address" onChange={this.handleEvent} />
+                                </div>
+                                <button type="submit" className="btn btn-danger">Submit</button>
+                            </form>
+                        </div>)
+                    }
             </div>
         )
     }
