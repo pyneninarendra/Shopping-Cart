@@ -39,3 +39,10 @@ footer{grid-area: footer; display: flex;align-items: center;justify-content: cen
 .cart-items li div:last-child{flex: 1;}
 .total{display: flex;justify-content: space-between;width: 100%;align-items: center;font-weight: bold;font-size: 1.4rem;}
 /* Cart */
+
+/* Modal */
+.ReactModal__Content--after-open{padding:0px 20px !important}
+.panel .panel-heading{display: flex;flex-direction: row-reverse;}
+.product-details{display: flex;}
+.product-description{padding:10px 20px;}
+/* Modal */
